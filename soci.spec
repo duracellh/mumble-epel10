@@ -22,7 +22,7 @@ SOCI is a lightweight, open source C++ database access library.
 Development headers and libraries for building applications with SOCI.
 
 %prep
-%setup -q -n soci-%{version}
+%setup -q -n soci-release-4.1   
 
 %build
 cmake -B build \
