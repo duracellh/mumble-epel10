@@ -30,7 +30,7 @@ Mumble is a low-latency, high-quality voice chat application.
 This package contains only the server component (murmur).
 
 %prep
-%setup -q -n mumble-%{version}
+%setup -q -n mumble-master
 
 %build
 cmake -B build \
