@@ -12,7 +12,6 @@ BuildRequires:  gcc-c++ cmake
 BuildRequires:  qt6-qtbase-devel qt6-qtsvg-devel
 BuildRequires:  openssl-devel
 BuildRequires:  protobuf-devel protobuf-compiler
-BuildRequires:  ogg-devel
 BuildRequires:  boost-devel
 BuildRequires:  libcap-devel
 BuildRequires:  libICE-devel
