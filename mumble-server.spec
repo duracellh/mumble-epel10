@@ -1,4 +1,3 @@
-cat > mumble-server.spec << 'SPECEOF'
 %global debug_package %{nil}
 
 Name:           mumble-server
@@ -56,4 +55,3 @@ cmake --install build --prefix %{buildroot}/usr
 %changelog
 * Mon Oct 26 2026 duracellh  - 1.7.0-1
 - Initial EPEL 10 build (server only, SQLite3 backend)
-SPECEOF
