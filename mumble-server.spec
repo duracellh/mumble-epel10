@@ -43,7 +43,8 @@ cmake -B build \
     -Denable-mysql=OFF \
     -DCMAKE_INSTALL_PREFIX=/usr
 
-cmake --build build -j%{?_smp_mflags}
+cmake --build build %{?_smp_mflags}
+
 
 %install
 cmake --install build --prefix %{buildroot}/usr
