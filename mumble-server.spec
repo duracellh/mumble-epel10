@@ -6,9 +6,10 @@ Release:        1%{?dist}
 Summary:        Mumble VoIP server (murmur)
 License:        BSD-3-Clause
 URL:            https://www.mumble.info
-Source0:        https://github.com/mumble-voip/mumble.git~master
+Source0:        https://github.com/mumble-voip/mumble.git#master
 
 BuildRequires:  gcc-c++ cmake
+BuildRequires:  git
 BuildRequires:  qt6-qtbase-devel qt6-qtsvg-devel
 BuildRequires:  openssl-devel
 BuildRequires:  protobuf-devel protobuf-compiler
@@ -30,7 +31,7 @@ Mumble is a low-latency, high-quality voice chat application.
 This package contains only the server component (murmur).
 
 %prep
-%setup -q -n mumble-master -g
+%autosetup -q -n mumble-master
 git submodule update --init --recursive 2>/dev/null || true
 
 %build
