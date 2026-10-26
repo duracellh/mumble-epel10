@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        Mumble VoIP server (murmur)
 License:        BSD-3-Clause
 URL:            https://www.mumble.info
-Source0:        https://github.com/mumble-voip/mumble/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/mumble-voip/mumble/archive/refs/heads/master.tar.gz
 
 BuildRequires:  gcc-c++ cmake
 BuildRequires:  qt6-qtbase-devel qt6-qtsvg-devel
@@ -32,7 +32,6 @@ This package contains only the server component (murmur).
 
 %prep
 %setup -q -n mumble-%{version}
-git submodule update --init --recursive 2>/dev/null || true
 
 %build
 cmake -B build \
