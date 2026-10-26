@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        C++ database access library
 License:        BSD-3-Clause
 URL:            https://soci.sourceforge.net/
-Source0:        https://github.com/SOCI/soci/archive/refs/tags/4.1.4.tar.gz
+Source0:        https://github.com/SOCI/soci/archive/refs/heads/release/4.1.tar.gz   
 
 BuildRequires:  gcc-c++ cmake
 BuildRequires:  sqlite-devel
