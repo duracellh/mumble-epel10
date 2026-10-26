@@ -9,19 +9,27 @@ URL:            https://www.mumble.info
 Source0:        https://github.com/mumble-voip/mumble.git#master
 
 BuildRequires:  gcc-c++ cmake
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  git
-BuildRequires:  qt6-qtbase-devel qt6-qtsvg-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  openssl-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  protobuf-devel protobuf-compiler
-BuildRequires:  boost-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  libcap-devel
-BuildRequires:  libICE-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  nlohmann-json-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  spdlog-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  cli11-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  sqlite-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  avahi-compat-libdns_sd-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:  soci-devel >= 4.1.4
+BuildRequires:  systemd-rpm-macros
 
 Requires:       soci
 Requires:       openssl-libs
