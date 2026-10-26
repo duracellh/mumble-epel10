@@ -39,7 +39,7 @@ Mumble is a low-latency, high-quality voice chat application.
 This package contains only the server component (murmur).
 
 %prep
-%autosetup -q -n mumble-master
+%autosetup -n mumble-master
 git submodule update --init --recursive 2>/dev/null || true
 
 %build
