@@ -6,7 +6,7 @@ Release:        1%{?dist}
 Summary:        Mumble VoIP server (murmur)
 License:        BSD-3-Clause
 URL:            https://www.mumble.info
-Source0:        https://github.com/mumble-voip/mumble/archive/refs/heads/master.tar.gz
+Source0:        https://github.com/mumble-voip/mumble.git#master
 
 BuildRequires:  gcc-c++ cmake
 BuildRequires:  qt6-qtbase-devel qt6-qtsvg-devel
@@ -31,6 +31,7 @@ This package contains only the server component (murmur).
 
 %prep
 %setup -q -n mumble-master
+git submodule update --init --recursive 2>/dev/null || true
 
 %build
 cmake -B build \
@@ -42,7 +43,6 @@ cmake -B build \
     -DCMAKE_INSTALL_PREFIX=/usr
 
 cmake --build build %{?_smp_mflags}
-
 
 %install
 cmake --install build --prefix %{buildroot}/usr
@@ -59,5 +59,5 @@ cmake --install build --prefix %{buildroot}/usr
 /usr/etc/systemd/system/mumble-server.service
 
 %changelog
-* Mon Oct 26 2026 Your Name <you@example.com> - 1.7.0-1
-- Initial EPEL 10 build (server only, SQLite3 backend)   
+* Mon Oct 26 2026 duracellh <zakhuff@gmail.com> - 1.7.0-1
+- Initial EPEL 10 build (server only, SQLite3 backend)
